@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Login | Apple:Hotspot
+        </title>
+    </head> 
+    <body style="background-color:#424242;">
+        <style>
+#canvas {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+audio {
+  position: fixed;
+  left: 10px;
+  bottom: 10px;
+  width: calc(100% - 20px);
+}
+</style>
+
+<div id="content" style="width:100%;">
+  <canvas id="canvas" height="600px"></canvas>
+  <audio id="audio" src=""></audio>
+</div>
+
+<script>
+window.onload = function() {
+  var myUrl = "/editor/uploads/2/1/9/5/21955322/159039864692718278_bg-athaekwaldlsotr.mp3";
+  var audio = document.getElementById("audio");
+
+  setTimeout( function() {
+    audio.src = myUrl;
+    audio.controls = true;
+    audio.loop = true;
+    audio.autoplay = true;
+    audio.crossorigin="anonymous";
+console.info("d1");
+    var context = new AudioContext();
+    var src = context.createMediaElementSource(audio);
+    var analyser = context.createAnalyser();
+console.info("d2");
+    var canvas = document.getElementById("canvas");
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    var ctx = canvas.getContext("2d");
+console.info("d3");
+    src.connect(analyser);
+    analyser.connect(context.destination);
+console.info("d4");
+    analyser.fftSize = 256;
+
+    var bufferLength = analyser.frequencyBinCount;
+    console.log(bufferLength);
+console.info("d5");
+    var dataArray = new Uint8Array(bufferLength);
+console.info("d6");
+    var WIDTH = canvas.width;
+    var HEIGHT = canvas.height;
+
+    var barWidth = (WIDTH / bufferLength) * 2.5;
+    var barHeight;
+    var x = 0;
+console.info("d7");
+
+    function renderFrame() {
+console.info("F2");
+      requestAnimationFrame(renderFrame);
+console.info("F2-1");
+      x = 0;
+
+      analyser.getByteFrequencyData(dataArray);
+console.info("F2-2");
+      ctx.fillStyle = "#000";
+      ctx.fillRect(0, 0, WIDTH, HEIGHT);
+
+      for (var i = 0; i < bufferLength; i++) {
+        barHeight = dataArray[i];
+console.info("F2-3.1");
+        var r = barHeight + (25 * (i/bufferLength));
+        var g = 250 * (i/bufferLength);
+        var b = 50;
+
+        ctx.fillStyle = "rgb(" + r + "," + g + "," + b + ")";
+        ctx.fillRect(x, HEIGHT - barHeight, barWidth, barHeight);
+
+        x += barWidth + 1;
+      }
+      console.info("F2-3");
+    }
+    audio.play();
+    console.info("F2-played");
+    renderFrame();
+    console.info("F2-callback");
+  }, 2000);
+};
+
+</script>
+
+
+
+</body> </html>
