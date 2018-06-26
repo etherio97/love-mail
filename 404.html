@@ -39,12 +39,14 @@ audio {
          if (playerIs == 0) {
              audioMsgResponse = ["showing audio", "hide audio"];
              x = 0;
+             return;
          } else (playerIs == 1) {
              audioMsgResponse = ["hiding audio", "showing audio"];
              x = 1;
+             return;
          } 
           
-         return audioPlayer(x);
+         audioPlayer(x);
       }
 
     function audioPlayer(power) {
