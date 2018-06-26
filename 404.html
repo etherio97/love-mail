@@ -35,7 +35,7 @@ audio {
    document.getElementById("canvas").addEventListener("touchstart", mainPlayer);
                                                       
    var mainPlayer = ( 
-      function() {
+      function(event) {
          if (playerIs == 0) {
              audioMsgResponse = ["showing audio", "hide audio"];
              x = 0;
