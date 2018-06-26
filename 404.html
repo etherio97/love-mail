@@ -27,7 +27,42 @@ audio {
   <canvas id="canvas" height="600px"></canvas>
   <audio id="audio" src=""></audio>
 </div>
+        
+<script>
+    var audioMsgResponse;
+    var playerIs = 1;
+    
+   document.getElementById("canvas").addEventListener("pressed", mainPlayer);
+                                                      
+   var mainPlayer = ( 
+      function() {
+         if (playerIs == 0) {
+             audioMsgResponse = ["showing audio", "hide audio"];
+             x = 0;
+         } else (playerIs == 1) {
+             audioMsgResponse = ["hiding audio", "showing audio"];
+             x = 1;
+         } 
+          
+         return audioPlayer(x);
+      }
 
+    function audioPlayer(power) {
+        var player = document.getElementById("audio");
+        if (power == 0) {
+            playerIs = 1;
+            x = "none";
+            return x;
+        } else {
+            playerIs = 0;
+            x = "block";
+            return x;
+        }
+        player.style.display = x;
+    });
+</script>
+        
+        
 <script>
 window.onload = function() {
   var myUrl = "/bg-athaekwaldlsotr.mp3";
