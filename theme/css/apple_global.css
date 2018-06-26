@@ -1041,7 +1041,7 @@ body {
 #ac-globalnav .ac-gn-link-mac {
 	background-size: 28px 44px;
 	background-repeat: no-repeat;
-	background-image: url("/theme/images/links/mac/image_large.svg");
+	background-image: url("/theme/images/mac-image_large.svg");
 	background-position: center center;
 	background-origin: content-box;
 	background-size: cover;
@@ -1049,16 +1049,16 @@ body {
 	max-width: 47.6px;
 }
 #ac-globalnav.no-svg .ac-gn-link-mac {
-	background-image: url("/theme/images/links/mac/image_large.png");
+	background-image: url("/theme/images/mac-image_large.png");
 }
 @media only screen and (max-width: 767px) {
 	#ac-globalnav .ac-gn-link-mac {
 		background-size: 33px 42px;
 		background-repeat: no-repeat;
-		background-image: url("../images/links/mac/image_large.svg");
+		background-image: url("/theme/images/mac-image_large.svg");
 	}
 	#ac-globalnav.no-svg .ac-gn-link-mac {
-		background-image: url("../images/links/mac/image_large.png");
+		background-image: url("/theme/images/mac-image_large.png");
 	}
 }
 .ac-gn-current-mac #ac-globalnav .ac-gn-link-mac {
@@ -1067,7 +1067,7 @@ body {
 #ac-globalnav .ac-gn-link-ipad {
 	background-size: 27px 44px;
 	background-repeat: no-repeat;
-	background-image: url("/theme/images/links/ipad/image_large.svg");
+	background-image: url("/theme/images/ipad-image_large.svg");
 	background-position: center center;
 	background-origin: content-box;
 	background-size: cover;
@@ -1075,16 +1075,16 @@ body {
 	max-width: 45.9px;
 }
 #ac-globalnav.no-svg .ac-gn-link-ipad {
-	background-image: url("/theme/images/links/ipad/image_large.png");
+	background-image: url("/theme/images/ipad-image_large.png");
 }
 @media only screen and (max-width: 767px) {
 	#ac-globalnav .ac-gn-link-ipad {
 		background-size: 33px 42px;
 		background-repeat: no-repeat;
-		background-image: url("/theme/images/links-ipad-image_large.svg");
+		background-image: url("/theme/images/ipad-image_large.png");
 	}
 	#ac-globalnav.no-svg .ac-gn-link-ipad {
-		background-image: url("/theme/images/links-ipad-image_large.png");
+		background-image: url("/theme/images/ipad-image_large.png");
 	}
 }
 .ac-gn-current-ipad #ac-globalnav .ac-gn-link-ipad {
@@ -1093,7 +1093,7 @@ body {
 #ac-globalnav .ac-gn-link-iphone {
 	background-size: 44px 44px;
 	background-repeat: no-repeat;
-	background-image: url("/theme/images/links-iphone-image_large.svg");
+	background-image: url("/theme/images/iphone-image_large.svg");
 	background-position: center center;
 	background-origin: content-box;
 	background-size: cover;
@@ -1101,16 +1101,16 @@ body {
 	max-width: 74.8px;
 }
 #ac-globalnav.no-svg .ac-gn-link-iphone {
-	background-image: url("/theme/images/links-iphone-image_large.png");
+	background-image: url("/theme/images/iphone-image_large.png");
 }
 @media only screen and (max-width: 767px) {
 	#ac-globalnav .ac-gn-link-iphone {
 		background-size: 53px 42px;
 		background-repeat: no-repeat;
-		background-image: url("/theme/images/links-iphone-image_large.svg");
+		background-image: url("/theme/images/iphone-image_large.svg");
 	}
 	#ac-globalnav.no-svg .ac-gn-link-iphone {
-		background-image: url("/theme/images/links-iphone-image_large.png");
+		background-image: url("/theme/images/iphone-image_large.png");
 	}
 }
 .ac-gn-current-iphone #ac-globalnav .ac-gn-link-iphone {
