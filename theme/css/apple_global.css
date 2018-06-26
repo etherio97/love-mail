@@ -1119,7 +1119,7 @@ body {
 #ac-globalnav .ac-gn-link-watch {
 	background-size: 40px 45px;
 	background-repeat: no-repeat;
-	background-image: url("/theme/images/links-watch/image_large.svg");
+	background-image: url("/theme/images/links-watch-image_large.svg");
 	background-position: center center;
 	background-origin: content-box;
 	background-size: cover;
@@ -1127,16 +1127,16 @@ body {
 	max-width: 68px;
 }
 #ac-globalnav.no-svg .ac-gn-link-watch {
-	background-image: url("/theme/images/links-watch/image_large.png");
+	background-image: url("/theme/images/links-watch-image_large.png");
 }
 @media only screen and (max-width: 767px) {
 	#ac-globalnav .ac-gn-link-watch {
 		background-size: 50px 42px;
 		background-repeat: no-repeat;
-		background-image: url("/theme/images/links-watch/image_large.svg");
+		background-image: url("/theme/images/links-watch-image_large.svg");
 	}
 	#ac-globalnav.no-svg .ac-gn-link-watch {
-		background-image: url("/theme/images/links-watch/image_large.png");
+		background-image: url("/theme/images/links-watch-image_large.png");
 	}
 }
 .ac-gn-current-watch #ac-globalnav .ac-gn-link-watch {
@@ -1145,7 +1145,7 @@ body {
 #ac-globalnav .ac-gn-link-tv {
 	background-size: 18px 44px;
 	background-repeat: no-repeat;
-	background-image: url("/theme/images/links-tv/image_large.svg");
+	background-image: url("/theme/images/links-tv-image_large.svg");
 	background-position: center center;
 	background-origin: content-box;
 	background-size: cover;
@@ -1153,16 +1153,16 @@ body {
 	max-width: 30.6px;
 }
 #ac-globalnav.no-svg .ac-gn-link-tv {
-	background-image: url("/theme/images/links-tv/image_large.png");
+	background-image: url("/theme/images/links-tv-image_large.png");
 }
 @media only screen and (max-width: 767px) {
 	#ac-globalnav .ac-gn-link-tv {
 		background-size: 23px 42px;
 		background-repeat: no-repeat;
-		background-image: url("/theme/images/links-tv/image_large.svg");
+		background-image: url("/theme/images/links-tv-image_large.svg");
 	}
 	#ac-globalnav.no-svg .ac-gn-link-tv {
-		background-image: url("/theme/images/links-tv/image_large.png");
+		background-image: url("/theme/images/links-tv-image_large.png");
 	}
 }
 .ac-gn-current-tv #ac-globalnav .ac-gn-link-tv {
@@ -1171,7 +1171,7 @@ body {
 #ac-globalnav .ac-gn-link-music {
 	background-size: 37px 45px;
 	background-repeat: no-repeat;
-	background-image: url("/theme/images/links-music/image_large.svg");
+	background-image: url("/theme/images/links-music-image_large.svg");
 	background-position: center center;
 	background-origin: content-box;
 	background-size: cover;
@@ -1179,16 +1179,16 @@ body {
 	max-width: 62.9px;
 }
 #ac-globalnav.no-svg .ac-gn-link-music {
-	background-image: url("/theme/images/links-music/image_large.png");
+	background-image: url("/theme/images/links-music-image_large.png");
 }
 @media only screen and (max-width: 767px) {
 	#ac-globalnav .ac-gn-link-music {
 		background-size: 46px 42px;
 		background-repeat: no-repeat;
-		background-image: url("/theme/images/links-music/image_large.svg");
+		background-image: url("/theme/images/links-music-image_large.svg");
 	}
 	#ac-globalnav.no-svg .ac-gn-link-music {
-		background-image: url("/theme/images/links-music/image_large.png");
+		background-image: url("/theme/images/links-music-image_large.png");
 	}
 }
 .ac-gn-current-music #ac-globalnav .ac-gn-link-music {
@@ -1197,7 +1197,7 @@ body {
 #ac-globalnav .ac-gn-link-support {
 	background-size: 52px 44px;
 	background-repeat: no-repeat;
-	background-image: url("/theme/images/links-support/image_large.svg");
+	background-image: url("/theme/images/links-support-image_large.svg");
 	background-position: center center;
 	background-origin: content-box;
 	background-size: cover;
@@ -1205,16 +1205,16 @@ body {
 	max-width: 88.4px;
 }
 #ac-globalnav.no-svg .ac-gn-link-support {
-	background-image: url("/theme/images/links-support/image_large.png");
+	background-image: url("/theme/images/links-support-image_large.png");
 }
 @media only screen and (max-width: 767px) {
 	#ac-globalnav .ac-gn-link-support {
 		background-size: 64px 42px;
 		background-repeat: no-repeat;
-		background-image: url("/theme/images/links-support/image_large.svg");
+		background-image: url("/theme/images/links-support-image_large.svg");
 	}
 	#ac-globalnav.no-svg .ac-gn-link-support {
-		background-image: url("/theme/images/links-support/image_small.png");
+		background-image: url("/theme/images/links-support-image_small.png");
 	}
 }
 .ac-gn-current-support #ac-globalnav .ac-gn-link-support {
@@ -1223,21 +1223,21 @@ body {
 #ac-globalnav .ac-gn-link-search {
 	background-size: 16px 44px;
 	background-repeat: no-repeat;
-	background-image: url("/theme/images/search/image_large.svg");
+	background-image: url("/theme/images/search-image_large.svg");
 	background-position: center center;
 	width: 16px;
 }
 #ac-globalnav.no-svg .ac-gn-link-search {
-	background-image: url("/theme/images/search/image_large.png");
+	background-image: url("/theme/images/search-image_large.png");
 }
 @media only screen and (max-width: 767px) {
 	#ac-globalnav .ac-gn-link-search {
 		background-size: 19px 42px;
 		background-repeat: no-repeat;
-		background-image: url("/theme/images/search/image_large.svg");
+		background-image: url("/theme/images/search-image_large.svg");
 	}
 	#ac-globalnav.no-svg .ac-gn-link-search {
-		background-image: url("/theme/images/search/image_large.png");
+		background-image: url("/theme/images/search-image_large.png");
 	}
 }
 .ac-gn-current-search #ac-globalnav .ac-gn-link-search {
