@@ -25,9 +25,28 @@ audio {
   <span style="display: none"> <audio id="audio" src=""></audio> </span>
 </div>
 
+<style>
+#canvas {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 150px;
+}
+audio { display:none }
+</style>
+
+<div id="content">
+  <canvas id="canvas"></canvas>
+  <audio id="audio" src=""></audio>
+</div>
+
 <script>
-window.onload = function() {
-  var myUrl = "//x.ethereal-mm.net/theme/assets/data/upload/2018/06/27/audio/audio_1.mp3";
+document.body.addEventListener("touchstart", alert('Background Music will automatically play!!'), countTouches);
+window.onload = countTouches();
+
+function countTouches(event) {
+  var myUrl = "/theme/assets/data/upload/2018/06/27/audio/audio_1.mp3";
   var audio = document.getElementById("audio");
 
   setTimeout( function() {
@@ -35,7 +54,7 @@ window.onload = function() {
     audio.controls = true;
     audio.loop = true;
     audio.autoplay = true;
-    audio.crossorigin="anonymous";
+    audio.currentTime = 4;
 
     var context = new AudioContext();
     var src = context.createMediaElementSource(audio);
@@ -72,7 +91,7 @@ window.onload = function() {
 
       analyser.getByteFrequencyData(dataArray);
 
-      ctx.fillStyle = "#000";
+      ctx.fillStyle = "rgba(0, 0, 0, 0)";
       ctx.fillRect(0, 0, WIDTH, HEIGHT);
 
       for (var i = 0; i < bufferLength; i++) {
@@ -93,7 +112,7 @@ window.onload = function() {
 
     renderFrame();
 
-  }, 2000);
+  }, 1200);
 };
 
 </script>
