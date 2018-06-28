@@ -1,7 +1,7 @@
 // set up text to print, each item in array is new line
 var aText = new Array(
     "ခ်စ္ရပါေသာ...", 
-    "&nbsp;&nbsp;&nbsp;&nbsp;ပူရွိန္းထံသုိ႔"
+    " ပူရွိန္း ထံသုိ႔"
     );
     var iSpeed = 100; // time delay of print out
     var iIndex = 0; // start printing array at this posision
@@ -12,8 +12,7 @@ var aText = new Array(
     var sContents = ''; // initialise contents variable
     var iRow; // initialise current row
      
-   function typewriter()
-    {
+   function typewriter() {
      sContents =  ' ';
      iRow = Math.max(0, iIndex-iScrollAt);
      var destination = document.getElementById("typedtext");
@@ -34,5 +33,10 @@ var aText = new Array(
      }
     }
     
-    document.body.onload =  typewriter();
-  
+    function indexStart() {
+
+        document.querySelector('audio').play();
+
+        typewriter();
+
+    }
