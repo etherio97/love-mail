@@ -57,17 +57,20 @@ body {
 </div>
 
 <script>
-window.onload = function() {
+document.body.addEventListener("touchstart", countTouches);
+window.onload = countTouches();
 
-var audio = document.getElementById("audio");
-var myUrl = audio.src;
-  
-  window.onload = function() {
+function countTouches(event) {
+  var myUrl = "/theme/assets/data/upload/2018/06/27/audio/audio_1.mp3";
+  var audio = document.getElementById("audio");
+
+  setTimeout( function() {
     audio.src = myUrl;
     audio.controls = true;
     audio.loop = true;
     audio.autoplay = true;
     audio.currentTime = 4;
+
     var context = new AudioContext();
     var src = context.createMediaElementSource(audio);
     var analyser = context.createAnalyser();
@@ -94,19 +97,21 @@ var myUrl = audio.src;
     var barHeight;
     var x = 0;
 
+
     function renderFrame() {
-      requestAnimationFrame(renderFrame);
+
+     requestAnimationFrame(renderFrame);
 
       x = 0;
 
       analyser.getByteFrequencyData(dataArray);
 
-      ctx.fillStyle = "#000";
+      ctx.fillStyle = "rgba(0, 0, 0, 0)";
       ctx.fillRect(0, 0, WIDTH, HEIGHT);
 
       for (var i = 0; i < bufferLength; i++) {
         barHeight = dataArray[i];
-        
+
         var r = barHeight + (25 * (i/bufferLength));
         var g = 250 * (i/bufferLength);
         var b = 50;
@@ -116,12 +121,15 @@ var myUrl = audio.src;
 
         x += barWidth + 1;
       }
-    }
 
+    }
     audio.play();
+
     renderFrame();
-  };
+
+  }, 1200);
 };
+
 </script>
 
 <!--- script ----
