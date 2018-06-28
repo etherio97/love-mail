@@ -2,10 +2,11 @@
 layout: blank_page
 title: Hello
 ---
-
+<head>
+<link type="text/css" href="blank_style.css" rel="stylesheet" />
 <style>
 #canvas {
-  position: fixed;
+  position: relative;
   left: 0;
   top: 0;
   width: 100%;
@@ -13,13 +14,15 @@ title: Hello
 }
 
 audio {
-  position: fixed;
+  position: relative;
   left: 10px;
   bottom: 10px;
   width: calc(100% - 20px);
 }
 </style>
-
+</head>
+  
+  
 <div id="content" style="width:100%; height:430px;">
   <canvas id="canvas"></canvas>
   <span style="display: none"> <audio id="audio" src=""></audio> </span>
