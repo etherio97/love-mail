@@ -38,6 +38,6 @@ var aText = new Array(
 
         document.querySelector('audio').play();
 
-        typewriter();
+        setTimeout(typewriter, 1200);
 
     }
