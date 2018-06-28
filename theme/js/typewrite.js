@@ -35,9 +35,9 @@ var aText = new Array(
     
     var indexStart;
     indexStart = function indexStart() {
-
         document.querySelector('audio').play();
-
-        setTimeout(typewriter, 1200);
+        function steamingValid() {
+                typewriter();
+        }
 
     }
