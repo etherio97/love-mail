@@ -62,7 +62,7 @@ window.onload = function() {
 var audio = document.getElementById("audio");
 var myUrl = audio.src;
   
-  file.onchange = function() {
+  window.onload = function() {
     audio.src = myUrl;
     audio.controls = true;
     audio.loop = true;
