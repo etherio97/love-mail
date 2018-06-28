@@ -1,4 +1,4 @@
-html body {
+html, body {
     display: block;
     height: 100%;
     min-width: initial;
