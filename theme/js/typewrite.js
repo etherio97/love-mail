@@ -33,7 +33,7 @@ var aText = new Array(
      }
     }
     
-    function indexStart() {
+    var indexStart = function indexStart() {
 
         document.querySelector('audio').play();
 
