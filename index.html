@@ -36,17 +36,11 @@ title: Hello
 </div>
 
 <script>
-document.body.addEventListener("touchstart", countTouches);
 window.onload = countTouches();
 
-function countTouches(event) {
-  var myUrl = "/theme/assets/data/upload/2018/06/27/audio/audio.mp3";
-  var audio = document.getElementById("audio");
-
-  setTimeout( function() {
-    audio.src = myUrl;
-    audio.controls = true;
-    audio.loop = true;
+function countTouches() {
+    var audio = document.getElementById("audio");
+    audio.src = "/theme/assets/data/upload/2018/06/27/audio/audio.mp3";
     audio.autoplay = true;
     audio.currentTime = 4;
 
@@ -85,7 +79,7 @@ function countTouches(event) {
 
       analyser.getByteFrequencyData(dataArray);
 
-      ctx.fillStyle = "rgba(0, 0, 0, 0)";
+      ctx.fillStyle = "rgba(65, 65, 65, 1)";
       ctx.fillRect(0, 0, WIDTH, HEIGHT);
 
       for (var i = 0; i < bufferLength; i++) {
@@ -105,8 +99,6 @@ function countTouches(event) {
     audio.play();
 
     renderFrame();
-
-  }, 1200);
 };
 
 </script>
