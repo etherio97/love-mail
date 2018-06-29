@@ -8,22 +8,24 @@ title: Hello
 
 <div id="content">
   <div class="maintp">
-    <div class="tpwte">
-
-      <h2>
-        <div class="line-1 anim-typewriter" id="typedtext">
-          <img class="mail fadeInLeft" style="cursor:pointer;" width="80px" height="auto" src="theme/img/mail.svg" alt="mail-icon">
+    <div class="tpwte" style="cursor:pointer;" >
+      <div class="mail fadeInLeft" >
+        
+          <div class="line-1 anim-typewriter" id="typedtext">
+            <img width="80px" height="auto" src="theme/img/mail.svg" alt="mail-icon">
+          </div>
+        
         </div>
-      </h2>
-      
+      </div> <!-- /* End: maintp */ -->
+
+        <h2 id="welcome-text"></h2>
       <script>
         document.querySelector('.mail').addEventListener('click', function() {
-          this.setAttribute('class', 'mail fadeOutRight');
+          document.querySelector('.mail').setAttribute("class", "mail fadeOutRight");
           setTimeout(indexStart, 1000);
         })
       </script>
     </div>
-  </div> <!-- /* End: maintp */ -->
 </div> <!-- /* End: content */ -->
 
 
