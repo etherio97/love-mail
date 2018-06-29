@@ -33,6 +33,10 @@ function typewriter() {
 
 function indexStart() {
       document.querySelector("audio#background").play();
-      document.querySelector("audio#background").buffer = typewriter();
+      if (document.querySelector("audio#background").currentTime > 4) {
+        typewriter();
+      } else {
+        setTimeout("indexStart()", 2000);
+      }
 
 };
