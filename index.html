@@ -11,17 +11,23 @@ title: Hello
     <div class="tpwte" style="cursor:pointer;" >
       <div class="mail fadeInLeft" >
         
-          <div class="line-1 anim-typewriter" id="typedtext">
+          <div class="line-1 anim-typewriter">
             <img width="80px" height="auto" src="theme/img/mail.svg" alt="mail-icon">
           </div>
         
         </div>
       </div> <!-- /* End: maintp */ -->
 
-        <h2 id="welcome-text"></h2>
+        <h2 class="infinite pulse" id="welcome-msg"></h2>
+        
+        <h2 class="bounce" id="typedtext"></h2>
+
       <script>
         document.querySelector('.mail').addEventListener('click', function() {
           document.querySelector('.mail').setAttribute("class", "mail fadeOutRight");
+          setTimeout(function() {
+            document.querySelector('#welcome-msg').innerHTML = 'စာအိတ္ဖြင့္ေနသည္...'
+          }, 460);
           setTimeout(indexStart, 1000);
         })
       </script>
