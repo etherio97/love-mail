@@ -18,7 +18,7 @@ function typewriter() {
     sContents += aText[iRow++] + "<br />";
   }
   destination.innerHTML =
-    sContents + aText[iIndex].substring(0, iTextPos) + "_";
+    sContents + aText[iIndex].substr(0, iTextPos) + "_";
   if (iTextPos++ == iArrLength) {
     iTextPos = 0;
     iIndex++;
