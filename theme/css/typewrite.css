@@ -2,9 +2,8 @@
 
 html,
 body {
-  display: block;
-  min-height: initial;
   min-width: initial;
+  min-height: initial;
 }
 
 body {
@@ -13,24 +12,22 @@ body {
   color: #f2f2f2;
   font-style: normal;
   transition: ease all 1.7s;
-
 }
-div.maintp{
-  width: inherit;
-  height: inherit;
-  padding: 4em;
-  color: rgba(255,255,255,.75);
-  font-family: 'Anonymous Pro', monospace;
-  overflow: hidden;
+
+div.maintp {
+  display: block;
+  position: relative;
+  justify-content: top;
+  align-items: center;
 }
 
 div.tpwte {
-  display: block;
-  position: fixed;
-  padding: 20px;
+  padding: 4em;
   width: 100%;
   height: auto;
   overflow: hidden;
+  font-family: 'Anonymous Pro', monospace;
+  color: rgba(255, 255, 255, .75);
 }
 
 .mail {
@@ -40,9 +37,9 @@ div.tpwte {
   animation-fill-mode: both;
 }
 
-h2.infinite {
-  -webkit-animation-duration: 1.8s;
-  animation-duration: 1s;
+.msg.infinite {
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
   -webkit-animation-iteration-count: infinite;
@@ -55,7 +52,6 @@ h2.infinite {
   to {
     opacity: 1;
   }
-
   25%,
   75% {
     opacity: 0;
@@ -68,7 +64,6 @@ h2.infinite {
   to {
     opacity: 1;
   }
-
   25%,
   75% {
     opacity: 0;
@@ -87,12 +82,10 @@ h2.infinite {
     -webkit-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1);
   }
-
   50% {
     -webkit-transform: scale3d(1.05, 1.05, 1.05);
     transform: scale3d(1.05, 1.05, 1.05);
   }
-
   to {
     -webkit-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1);
@@ -104,12 +97,10 @@ h2.infinite {
     -webkit-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1);
   }
-
   50% {
     -webkit-transform: scale3d(1.05, 1.05, 1.05);
     transform: scale3d(1.05, 1.05, 1.05);
   }
-
   to {
     -webkit-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1);
@@ -130,29 +121,24 @@ h2.infinite {
     -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
     animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   }
-
   from {
     opacity: 0;
     -webkit-transform: translate3d(0, 3000px, 0);
     transform: translate3d(0, 3000px, 0);
   }
-
   60% {
     opacity: 1;
     -webkit-transform: translate3d(0, -20px, 0);
     transform: translate3d(0, -20px, 0);
   }
-
   75% {
     -webkit-transform: translate3d(0, 10px, 0);
     transform: translate3d(0, 10px, 0);
   }
-
   90% {
     -webkit-transform: translate3d(0, -5px, 0);
     transform: translate3d(0, -5px, 0);
   }
-
   to {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
@@ -168,29 +154,24 @@ h2.infinite {
     -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
     animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   }
-
   from {
     opacity: 0;
     -webkit-transform: translate3d(0, 3000px, 0);
     transform: translate3d(0, 3000px, 0);
   }
-
   60% {
     opacity: 1;
     -webkit-transform: translate3d(0, -20px, 0);
     transform: translate3d(0, -20px, 0);
   }
-
   75% {
     -webkit-transform: translate3d(0, 10px, 0);
     transform: translate3d(0, 10px, 0);
   }
-
   90% {
     -webkit-transform: translate3d(0, -5px, 0);
     transform: translate3d(0, -5px, 0);
   }
-
   to {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
@@ -206,7 +187,6 @@ h2.infinite {
   from {
     opacity: 0;
   }
-
   to {
     opacity: 1;
   }
@@ -216,7 +196,6 @@ h2.infinite {
   from {
     opacity: 0;
   }
-
   to {
     opacity: 1;
   }
@@ -233,7 +212,6 @@ h2.infinite {
     -webkit-transform: translate3d(-100%, 0, 0);
     transform: translate3d(-100%, 0, 0);
   }
-
   to {
     opacity: 1;
     -webkit-transform: translate3d(0, 0, 0);
@@ -247,7 +225,6 @@ h2.infinite {
     -webkit-transform: translate3d(-100%, 0, 0);
     transform: translate3d(-100%, 0, 0);
   }
-
   to {
     opacity: 1;
     -webkit-transform: translate3d(0, 0, 0);
@@ -264,7 +241,6 @@ h2.infinite {
   from {
     opacity: 1;
   }
-
   to {
     opacity: 0;
     -webkit-transform: translate3d(100%, 0, 0);
@@ -276,7 +252,6 @@ h2.infinite {
   from {
     opacity: 1;
   }
-
   to {
     opacity: 0;
     -webkit-transform: translate3d(100%, 0, 0);
@@ -287,4 +262,17 @@ h2.infinite {
 .fadeOutRight {
   -webkit-animation-name: fadeOutRight;
   animation-name: fadeOutRight;
+}
+
+/* Custom Controls */
+.hide {
+  opacity: 0;
+  animation: fadeOut 2s;
+  -webkit-animation: fadeOut 2s;
+}
+
+.show {
+  opacity: 1;
+  animation: fadeIn 2s;
+  -webkit-animation: fadeIn 2s;
 }

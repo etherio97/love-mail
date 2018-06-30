@@ -1,7 +1,4 @@
---- 
- layout: blank-page
- title: Hello 
----
+--- layout: blank-page title: Hello ---
 
 <head>
   <link type="text/css" href="theme/css/typewrite.css" rel="stylesheet" />
@@ -11,22 +8,22 @@
   <div class="tpwte" style="cursor:pointer;">
     <div class="mail fadeInLeft">
 
-      <img width="80px" height="auto" src="theme/img/mail.svg" alt="mail-icon">
+      <img id="mail" width="80px" height="auto" src="theme/img/mail.svg" alt="mail-icon">
+      <h2 class="msg infinite pulse hide" id="welcome-msg"></h2>
+      <h2 class="msg fadeIn" id="typedtext"></h2>
 
     </div>
   </div>
   <!-- /* End: maintp */ -->
 
-  <h2 class="infinite pulse" id="welcome-msg"></h2>
-
-  <h2 class="bounce" id="typedtext"></h2>
-
   <script>
     document.querySelector('.mail').addEventListener('click', function () {
-      document.querySelector('.mail').setAttribute("class", "mail fadeOutRight");
+      document.querySelector('#mail').setAttribute("class", "mail fadeOutRight");
       setTimeout(function () {
-        document.querySelector('#welcome-msg').innerHTML = '<font color="red">♥</font>';
+        document.querySelector('#welcome-msg').innerHTML = '<font color="red" size="50px">♥</font>';
+        document.querySelector('#welcome-msg').setAttribute("class", "msg infinite pulse show");
       }, 460);
+
       setTimeout(indexStart, 1000);
     })
   </script>
