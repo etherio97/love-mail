@@ -3,7 +3,7 @@
 html,
 body {
   display: block;
-  height: 100%;
+  min-height: initial;
   min-width: initial;
 }
 
@@ -16,8 +16,8 @@ body {
 
 }
 div.maintp{
-  width: 100%;
-  height: auto;
+  width: inherit;
+  height: inherit;
   padding: 4em;
   color: rgba(255,255,255,.75);
   font-family: 'Anonymous Pro', monospace;
