@@ -31,29 +31,23 @@ title: သို႔... စာတစ္ေစာင္
       setTimeout(indexStart, 1000);
     });
 
-    var live = 13.50;
-
-    function nowIs() {
-      var td = new Date();
-      t = td.getHours() + '.' + td.getMinutes()
-      return Number(t);
-    }
-
     function wonload() {
-      var now = nowIs();
-      if (live >= now) {
+      var td = new Date();
+      var tnow = Number( td.getHours() + '.' + td.getMinutes() );
+      var live = 14.02;
+      if (tnow > live || tnow == live) {
         document.querySelector('#mail').setAttribute("class", "mail fadeOutRight");
-        setTimeout(function() {
-          document.querySelector('#welcome-msg').innerHTML = '<font color="red" size="50px">♥</font>';
-          document.querySelector('#welcome-msg').setAttribute("class", "msg infinite pulse show");
-        }, 460)
-
-        setTimeout(indexStart, 1000);
+        document.querySelector('#welcome-msg').innerHTML = '<font color="red" size="50px">♥</font>';
+        document.querySelector('#welcome-msg').setAttribute("class", "msg infinite pulse show");
+        indexStart();
+      } else {
+        setTimeout(wonload, 100);
+        console.log('' + td + ', ' +tnow + ', ' + live);
 
       }
     }
 
-    setInterval(wonload,120);
+    window.onload = wonload();
 
   </script>
 
