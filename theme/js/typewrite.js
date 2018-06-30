@@ -12,7 +12,7 @@ var iRow; // initialise current row
 function typewriter() {
   sContents = " ";
   iRow = Math.max(0, iIndex - iScrollAt);
-  var destination = document.getElementById("welcome-msg");
+  var destination = document.getElementById("typedtext");
 
   while (iRow < iIndex) {
     sContents += aText[iRow++] + "<br />";

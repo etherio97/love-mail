@@ -1,38 +1,38 @@
+--- 
+ layout: blank-page
+ title: Hello 
 ---
-layout: blank-page
-title: Hello
----
+
 <head>
   <link type="text/css" href="theme/css/typewrite.css" rel="stylesheet" />
 </head>
 
-<div id="content">
-  <div class="maintp">
-    <div class="tpwte" style="cursor:pointer;" >
-      <div class="mail fadeInLeft" >
-        
-          <div class="line-1 anim-typewriter">
-            <img width="80px" height="auto" src="theme/img/mail.svg" alt="mail-icon">
-          </div>
-        
-        </div>
-      </div> <!-- /* End: maintp */ -->
+<div class="maintp">
+  <div class="tpwte" style="cursor:pointer;">
+    <div class="mail fadeInLeft">
 
-        <h2 class="infinite pulse" id="welcome-msg"></h2>
-        
-        <h2 class="bounce" id="typedtext"></h2>
+      <img width="80px" height="auto" src="theme/img/mail.svg" alt="mail-icon">
 
-      <script>
-        document.querySelector('.mail').addEventListener('click', function() {
-          document.querySelector('.mail').setAttribute("class", "mail fadeOutRight");
-          setTimeout(function() {
-            document.querySelector('#welcome-msg').innerHTML = '<font color="red">♥</font>';
-          }, 460);
-          setTimeout(indexStart, 1000);
-        })
-      </script>
     </div>
-</div> <!-- /* End: content */ -->
+  </div>
+  <!-- /* End: maintp */ -->
+
+  <h2 class="infinite pulse" id="welcome-msg"></h2>
+
+  <h2 class="bounce" id="typedtext"></h2>
+
+  <script>
+    document.querySelector('.mail').addEventListener('click', function () {
+      document.querySelector('.mail').setAttribute("class", "mail fadeOutRight");
+      setTimeout(function () {
+        document.querySelector('#welcome-msg').innerHTML = '<font color="red">♥</font>';
+      }, 460);
+      setTimeout(indexStart, 1000);
+    })
+  </script>
+
+</div>
+<!-- /* End: content */ -->
 
 
 <audio id="background" src="theme/assets/data/upload/2018/06/27/audio/audio.mp3" preload></audio>

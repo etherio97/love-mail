@@ -5,21 +5,16 @@ body {
   display: block;
   height: 100%;
   min-width: initial;
+}
+
+body {
   font-family: "Anonymous Pro", Courier, monospace;
   background-color: #626262;
   color: #f2f2f2;
   font-style: normal;
   transition: ease all 1.7s;
-}
 
-#content {
-  height: auto;
-  display: block;
-  position: relative;
-  overflow: hidden;
-  transition: ease all 1.7s;
 }
-
 div.maintp{
   width: 100%;
   height: auto;
@@ -27,7 +22,6 @@ div.maintp{
   color: rgba(255,255,255,.75);
   font-family: 'Anonymous Pro', monospace;
   overflow: hidden;
-  transition: ease all 1.7s;
 }
 
 div.tpwte {
@@ -37,7 +31,6 @@ div.tpwte {
   width: 100%;
   height: auto;
   overflow: hidden;
-  transition: ease all 1.7s;
 }
 
 .mail {
@@ -56,33 +49,6 @@ h2.infinite {
   animation-iteration-count: infinite;
 }
 
-/*
-.line-1{
-    position: relative;
-    top: 50%;
-    width: 100%;
-    margin: 0 auto;
-    border-right: 2px solid rgba(255,255,255,.75);
-    font-size: 180%;
-    text-align: center;
-    white-space: nowrap;
-    overflow: hidden;
-    transform: translateY(-50%);
-}
-
-.anim-typewriter{
-  animation: typewriter 2s steps(6) 1s 1 normal both,
-             blinkTextCursor 500ms steps(20) infinite normal;
-}
-@keyframes typewriter{
-  from{width: 0;}
-  to{width: 100%;}
-}
-@keyframes blinkTextCursor{
-  from{border-right-color: rgba(255,255,255,.75);}
-  to{border-right-color: transparent;}
-}
-*/
 @-webkit-keyframes flash {
   from,
   50%,
