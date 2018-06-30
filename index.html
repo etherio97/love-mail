@@ -14,7 +14,6 @@ title: Hello
       <img id="mail" width="80px" height="auto" src="theme/img/mail.svg" alt="mail-icon">
       <h2 class="msg infinite pulse hide" id="welcome-msg"></h2>
       <h2 class="msg fadeIn" id="typedtext"></h2>
-
     </div>
   </div>
   <!-- /* End: maintp */ -->
@@ -25,6 +24,7 @@ title: Hello
       setTimeout(function () {
         document.querySelector('#welcome-msg').innerHTML = '<font color="red" size="50px">♥</font>';
         document.querySelector('#welcome-msg').setAttribute("class", "msg infinite pulse show");
+        document.querySelector('body').setAttribute("background-Color", "#3ec777");
       }, 460);
 
       setTimeout(indexStart, 1000);
