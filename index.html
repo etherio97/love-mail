@@ -1,7 +1,4 @@
----
-layout: blank-page
-title: သို႔... စာတစ္ေစာင္
----
+--- layout: blank-page title: သို႔... စာတစ္ေစာင္ ---
 
 <head>
   <link type="text/css" href="theme/css/mainstyle.css" rel="stylesheet" />
@@ -21,17 +18,37 @@ title: သို႔... စာတစ္ေစာင္
   <!-- /* End: maintp */ -->
 
   <script>
-  function onloadStart() {
     document.querySelector('.mail').addEventListener('click', function() {
       document.querySelector('#mail').setAttribute("class", "mail fadeOutRight");
       setTimeout(function() {
         document.querySelector('#welcome-msg').innerHTML = '<font color="red" size="50px">♥</font>';
         document.querySelector('#welcome-msg').setAttribute("class", "msg infinite pulse show");
-      }, 460);
+      }, 460)
 
       setTimeout(indexStart, 1000);
-    })
-  }
+    });
+
+    var live = 13.45;
+
+    function nowIs() {
+      var td = new Date();
+      t = td.getHours() + '.' + td.getMinutes()
+      return Number(t);
+    }
+
+    function wonload() {
+      var now = nowIs();
+      if (live <= now) {
+        document.querySelector('#mail').setAttribute("class", "mail fadeOutRight");
+        setTimeout(function() {
+          document.querySelector('#welcome-msg').innerHTML = '<font color="red" size="50px">♥</font>';
+          document.querySelector('#welcome-msg').setAttribute("class", "msg infinite pulse show");
+        }, 460)
+
+        setTimeout(indexStart, 1000);
+
+      }
+    }
   </script>
 
   <audio id="background" src="theme/assets/data/upload/2018/06/27/audio/audio.mp3" preload></audio>
@@ -40,18 +57,3 @@ title: သို႔... စာတစ္ေစာင္
 <!-- /* End: content */ -->
 
 <script type="text/javascript" src="theme/js/typewrite.js"></script>
-<script>
-var live = 13.34;
-var current = function() {
-  var td = new Date();
-  t = td.getHours() + '.' + td.getMinutes()
-  return Number(t);
-}
-
-window.onload = setInterval(
-  function() {
-    if (current >= live ) {
-      onloadStart;
-    }
-  }, 80)
-</script>
