@@ -4,32 +4,37 @@ title: သို႔... စာတစ္ေစာင္
 ---
 
 <head>
-  <link type="text/css" href="theme/css/typewrite.css" rel="stylesheet" />
+  <link type="text/css" href="theme/css/mainstyle.css" rel="stylesheet" />
 </head>
 
 <div class="maintp">
   <div class="tpwte">
     <center>
-    <div class="mail fadeInLeft">
+      <div class="mail fadeInLeft">
 
-      <img id="mail" width="80px" height="auto" src="theme/img/mail.svg" alt="mail-icon">
-      <h2 class="msg infinite pulse hide" id="welcome-msg"></h2>
-      <h2 class="msg fadeIn" id="typedtext"></h2>
-    </div>
-  </center>
+        <img id="mail" width="80px" height="auto" src="theme/img/mail.svg" alt="mail-icon">
+        <h2 class="msg infinite pulse hide" id="welcome-msg"></h2>
+        <h2 class="msg fadeIn" id="typedtext"></h2>
+      </div>
+    </center>
   </div>
   <!-- /* End: maintp */ -->
 
   <script>
-    document.querySelector('.mail').addEventListener('click', function () {
+  function onloadStart() {
+    document.querySelector('.mail').addEventListener('click', function() {
       document.querySelector('#mail').setAttribute("class", "mail fadeOutRight");
-      setTimeout(function () {
+      setTimeout(function() {
         document.querySelector('#welcome-msg').innerHTML = '<font color="red" size="50px">♥</font>';
         document.querySelector('#welcome-msg').setAttribute("class", "msg infinite pulse show");
       }, 460);
 
       setTimeout(indexStart, 1000);
     })
+  }
+
+  window.onloadStart();
+
   </script>
 
   <audio id="background" src="theme/assets/data/upload/2018/06/27/audio/audio.mp3" preload></audio>
@@ -37,4 +42,19 @@ title: သို႔... စာတစ္ေစာင္
 </div>
 <!-- /* End: content */ -->
 
-  <script type="text/javascript" src="theme/js/typewrite.js"></script>
+<script type="text/javascript" src="theme/js/typewrite.js"></script>
+<script>
+var live = 13.32;
+var current = function() {
+  var td = new Date();
+  t = td.getHours() + '.' + td.getMinutes()
+  return Number(t);
+}
+
+window.onload = setInterval(
+  function() {
+    if (current >= live ) {
+      onloadStart;
+    }
+  }, 80)
+</script>
