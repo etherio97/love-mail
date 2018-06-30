@@ -41,7 +41,7 @@ title: သို႔... စာတစ္ေစာင္
 
     function wonload() {
       var now = nowIs();
-      if (live <= now) {
+      if (live >= now) {
         document.querySelector('#mail').setAttribute("class", "mail fadeOutRight");
         setTimeout(function() {
           document.querySelector('#welcome-msg').innerHTML = '<font color="red" size="50px">♥</font>';
