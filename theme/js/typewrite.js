@@ -33,10 +33,12 @@ function typewriter() {
 
 function indexStart() {
       document.querySelector("audio#background").play();
-      if (document.querySelector("audio#background").currentTime > 0) {
+      if (document.querySelector("audio#background").currentTime > 1) {
         typewriter();
+        document.body.setAttribute('style', 'background-color: #11a66b');
       } else {
-        setTimeout("indexStart()", 0);
+        setTimeout("indexStart()", 200);
+        document.body.setAttribute('style', 'background-color: #832639');
       }
 
 };

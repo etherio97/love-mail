@@ -4,6 +4,8 @@ html,
 body {
   min-width: initial;
   min-height: initial;
+  width: 100%;
+  height: 100%;
 }
 
 body {
@@ -19,12 +21,12 @@ div.maintp {
   position: relative;
   justify-content: top;
   align-items: center;
+  min-width: initial;
+  width: initial;
 }
 
 div.tpwte {
   padding: 4em;
-  width: initial;
-  height: initial;
   overflow: hidden;
   font-family: 'Anonymous Pro', monospace;
   color: rgba(255, 255, 255, .75);
