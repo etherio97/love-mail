@@ -50,9 +50,9 @@ function indexStart() {
     document.getElementById('recipient').innerHTML = decodeURIComponent(recipient);
 
     if (audio.currentTime > 4) {
-      typeMsg("#welcomeLod-1", 100, 1.6, 15);
-      typeMsg("#welcomeLod-2", 2000, 2.2, 24);
-      typeMsg("#welcomeLod-3", 4300, 3.5, 35);
+      typeMsg("#welcomeLod-1", 100, 1.6, 1.2, 15);
+      typeMsg("#welcomeLod-2", 2000, 2.2, 1.2, 24);
+      typeMsg("#welcomeLod-3", 4300, 3.5, 1.2, 35);
     } else {
       setTimeout("indexStart()", 200);
     }
@@ -66,9 +66,10 @@ function indexStart() {
 
 function typeMsg(id, delay, time, step, count) {
   var docx = document.querySelector(id);
-  attr = 'typing '+ time + ' steps( ' + step + 's, end), blink-caret .75s step-end' + count + ')';
+  attr = time + ' steps(' + step + ', end), blink-caret .75s step-end ' + count + ')';
   setTimeout(function () {
-    docx.setAttribute('class', attr);
+    docx.setAttribute('class', 'msg typing');
+    docx.setAttribute('style', attr);
   }, delay);
 
 }
