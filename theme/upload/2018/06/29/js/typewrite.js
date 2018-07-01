@@ -1,7 +1,7 @@
 var audio = document.querySelector("#background")
 
 // set up text to print, each item in array is new line
-var aText = new Array("ခ်စ္ရပါေသာ...", " ::နာမည္:: ထံသုိ႔");
+var aText = new Array("ခ်စ္ရပါေသာ...", recipient + " ထံသုိ႔");
 var iSpeed = 100; // time delay of print out
 var iIndex = 0; // start printing array at this posision
 var iArrLength = aText[0].length; // the length of the text array
