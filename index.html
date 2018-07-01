@@ -4,56 +4,39 @@ title: သို႔... စာတစ္ေစာင္
 ---
 
 <head>
-  <link type="text/css" href="theme/css/mainstyle.css" rel="stylesheet" />
+  <link type="text/css" href="theme/upload/2018/06/29/css/mainstyle.css" rel="stylesheet" />
 </head>
 
 <div class="maintp">
   <div class="tpwte">
-    <center>
-      <div class="mail fadeInLeft">
+    <div class="mail fadeInLeft">
 
-        <img id="mail" width="80px" height="auto" src="theme/img/mail.svg" alt="mail-icon">
-        <h2 class="msg infinite pulse hide" id="welcome-msg"></h2>
-        <h2 class="msg fadeIn" id="typedtext"></h2>
-      </div>
-    </center>
+      <img id="mail" width="80px" height="auto" src="theme/img/mail.svg" alt="mail-icon">
+      <h2 class="msg infinite pulse hide" id="welcome-msg"></h2>
+      <h2 class="msg fadeIn" id="typedtext"></h2>
+    </div>
   </div>
   <!-- /* End: maintp */ -->
 
   <script>
-    document.querySelector('.mail').addEventListener('click', function() {
+  function startOnload() {
+    document.querySelector('.mail').addEventListener('click', function () {
       document.querySelector('#mail').setAttribute("class", "mail fadeOutRight");
-      setTimeout(function() {
+      setTimeout(function () {
         document.querySelector('#welcome-msg').innerHTML = '<font color="red" size="50px">♥</font>';
         document.querySelector('#welcome-msg').setAttribute("class", "msg infinite pulse show");
-      }, 460)
+      }, 460);
 
       setTimeout(indexStart, 1000);
-    });
+    })
 
-    // function wonload() {
-    //   var td = new Date();
-    //   var tnow = Number( td.getHours() + '.' + td.getMinutes() );
-    //   var live = 14.5;
-    //   if (tnow > live || tnow == live) {
-    //     document.querySelector('#mail').setAttribute("class", "mail fadeOutRight");
-    //     document.querySelector('#welcome-msg').innerHTML = '<font color="red" size="50px">♥</font>';
-    //     document.querySelector('#welcome-msg').setAttribute("class", "msg infinite pulse show");
-    //     indexStart();
-    //   } else {
-    //     setTimeout(wonload, 100);
-    //     console.log('' + td + ', ' +tnow + ', ' + live);
-    //
-    //   }
-    // }
-    //
-    // window.onload = wonload();
+    setTimeout(startOnload, 800);
 
   </script>
-
-  <audio id="background" src="theme/assets/data/upload/2018/06/27/audio/audio.mp3" preload></audio>
 
 </div>
 <!-- /* End: content */ -->
 
+
+<audio id="background" src="theme/upload/2018/06/27/audio/audio.mp3" preload></audio>
 <script type="text/javascript" src="theme/js/typewrite.js"></script>
