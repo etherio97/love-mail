@@ -4,12 +4,17 @@ x = setTimeout(startOnload, 800);
 function startOnload() {
   document.querySelector('.mail').addEventListener('click', function () {
     document.querySelector('#mail').setAttribute("class", "mail fadeOutRight");
-    setTimeout(function () {
-      document.querySelector('#welcomeMsg').setAttribute("class", "msg infinite pulse show");
-      document.querySelector('#background').volume = 0.8;
+    setInterval(function () {
+      document.querySelector('#welcomeMsg').setAttribute("class", "msg bounceInUp");
     }, 460);
 
-    setTimeout(indexStart, 1000);
+    setInterval(function () {
+      document.querySelector('#welcomeMsg').setAttribute("class", "msg hide");
+    }, 3900);
+
+    document.querySelector('#background').volume = 0.8;
+
+    setTimeout(indexStart, 3900);
   })
 }
 
@@ -39,7 +44,7 @@ function indexStart() {
     if (audio.currentTime > 4) {
       typeMsg("#welcomeLod-1", 100);
       typeMsg("#welcomeLod-2", 2000);
-      typeMsg("#welcomeLod-3", 1000);
+      typeMsg("#welcomeLod-3", 4000);
     } else {
       setTimeout("indexStart()", 200);
     }
@@ -51,13 +56,11 @@ function indexStart() {
 
 };
 
-var ts09i43ej = 0;
 function typeMsg(id, delay, time) {
   var docx = document.querySelector(id);
 
-  var t = delay + ts09i43ej;
-  var ts09u43ej = t;
-  setTimeout(function() {
+  setTimeout(function () {
     docx.setAttribute('class', 'msg typing show')
-  }, ts09u43ej);
+  }, delay);
+
 }

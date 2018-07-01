@@ -30,22 +30,6 @@ div.tpwte {
   color: rgba(255, 255, 255, .75);
 }
 
-.mail {
-  -webkit-animation-duration: 2.6s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-}
-
-.msg.infinite {
-  -webkit-animation-duration: 3s;
-  animation-duration: 3s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-}
-
 @-webkit-keyframes flash {
   from,
   50%,
@@ -266,13 +250,43 @@ div.tpwte {
 
 /* Custom Controls */
 .hide {
-  opacity: 0;
-  animation: fadeOut 2s;
-  -webkit-animation: fadeOut 2s;
+  animation: fadeOut 1s;
+  -webkit-animation: fadeOut 1s;
 }
 
 .show {
   opacity: 1;
   animation: fadeIn 2s;
   -webkit-animation: fadeIn 2s;
+}
+
+.mail {
+  -webkit-animation-duration: 2.6s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.msg {
+  opacity: 0;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+}
+
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
