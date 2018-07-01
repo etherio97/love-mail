@@ -1,47 +1,45 @@
-var audio = document.querySelector("#background")
+var x;
+x = setTimeout(startOnload, 800);
 
-// set up text to print, each item in array is new line
-function typewriter() {
-  var rept = decodeURIComponent(recipient) + " ထံသုိ႔";
-  console.log(rept);
-  var aText = new Array("ခ်စ္ရပါေသာ...", rept) ;
-  var iSpeed = 100; // time delay of print out
-  var iIndex = 0; // start printing array at this posision
-  var iArrLength = aText[0].length; // the length of the text array
-  var iScrollAt = 20; // start scrolling up at this many lines
+function startOnload() {
+  document.querySelector('.mail').addEventListener('click', function () {
+    document.querySelector('#mail').setAttribute("class", "mail fadeOutRight");
+    setTimeout(function () {
+      document.querySelector('#welcomeMsg').setAttribute("class", "msg infinite pulse show");
+      document.querySelector('#background').volume = 0.8;
+    }, 460);
 
-  var iTextPos = 0; // initialise text position
-  var sContents = ""; // initialise contents variable
-  var iRow; // initialise current row
-
-  sContents = " ";
-  iRow = Math.max(0, iIndex - iScrollAt);
-  var destination = document.getElementById("typedtext");
-
-  while (iRow < iIndex) {
-    sContents += aText[iRow++] + "<br />";
-  }
-  destination.innerHTML =
-    sContents + aText[iIndex].substr(0, iTextPos) + "✎";
-  if (iTextPos++ == iArrLength) {
-    iTextPos = 0;
-    iIndex++;
-    if (iIndex != aText.length) {
-      iArrLength = aText[iIndex].length;
-      setTimeout("typewriter()", 500);
-    }
-  } else {
-    setTimeout("typewriter()", iSpeed);
-  }
+    setTimeout(indexStart, 1000);
+  })
 }
+
+var lsOutput = function (x) {
+  var result = search(x);
+  return result[1];
+}
+
+var search = function (x) {
+  var a = decodeURIComponent(location.search);
+  var b = a.slice(1);
+  a = b.split("&");
+  return a[x].split("=");
+}
+
+var method = lsOutput(0);
+var recipient = lsOutput(1);
+var audio = document.querySelector("#background");
 
 function indexStart() {
   audio.play();
-  if (audio.currentTime > 0) {
-    document.body.setAttribute('style', 'background-color: #11a66b');
+  document.body.style.backgroundColor = '#11a66b';
 
-    if (audio.currentTime > 5) {
-      typewriter();;
+  if (audio.currentTime > 0) {
+    document.getElementById('recipient').innerHTML = decodeURIComponent(recipient);
+
+    if (audio.currentTime > 4) {
+      typeMsg("#welcomeLod-1", 100);
+      typeMsg("#welcomeLod-2", 2000);
+      typeMsg("#welcomeLod-3", 1000);
     } else {
       setTimeout("indexStart()", 200);
     }
@@ -52,3 +50,14 @@ function indexStart() {
   }
 
 };
+
+var ts09i43ej = 0;
+function typeMsg(id, delay, time) {
+  var docx = document.querySelector(id);
+
+  var t = delay + ts09i43ej;
+  var ts09u43ej = t;
+  setTimeout(function() {
+    docx.setAttribute('class', 'msg typing show')
+  }, ts09u43ej);
+}
