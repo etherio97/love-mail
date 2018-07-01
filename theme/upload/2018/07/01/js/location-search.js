@@ -1,4 +1,5 @@
-var method = lsOutput(0), recipient = lsOutput(1);
+var method = lsOutput(0);
+var recipient = lsOutput(1);
 
 function lsOutput(x){
     var result = search(x);
