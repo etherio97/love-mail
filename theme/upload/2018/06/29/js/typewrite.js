@@ -1,3 +1,5 @@
+var audio = document.querySelector("#background")
+
 // set up text to print, each item in array is new line
 var aText = new Array("ခ်စ္ရပါေသာ...", " ::နာမည္:: ထံသုိ႔");
 var iSpeed = 100; // time delay of print out
@@ -32,13 +34,19 @@ function typewriter() {
 }
 
 function indexStart() {
-      document.querySelector("audio#background").play();
-      if (document.querySelector("audio#background").currentTime > 5  ) {
-        typewriter();
-        document.body.setAttribute('style', 'background-color: #11a66b');
-      } else {
-        setTimeout("indexStart()", 200);
-        document.body.setAttribute('style', 'background-color: #832639');
-      }
+  audio.play();
+  if (audio.currentTime > 0) {
+    document.body.setAttribute('style', 'background-color: #11a66b');
+
+    if (audio.currentTime > 5) {
+      typewriter();;
+    } else {
+      setTimeout("indexStart()", 200);
+    }
+
+  } else {
+    setTimeout("indexStart()", 200);
+    document.body.style.backgroundColor = '#832639';
+  }
 
 };
