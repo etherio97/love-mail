@@ -1,12 +1,16 @@
- var recipient = recipient();
- recipient = function recipient() {
-    ls = location.search;
-    ls = ls.slice(1);
-    ls = ls.split("&");
-    return ls;
+var ls = function () {
+    var a = location.search;
+    var b = a.slice(1);
+
+    return b.split("&");
 }
 
-function lsMethod() {
+function lsMethod(num) {
     //* String Method on Location Search 
-
+    var method = {0:"decode", 1:"encode"};
+    
+    return method[num];
 }
+
+var method = lsMethod();
+var param = ls();
