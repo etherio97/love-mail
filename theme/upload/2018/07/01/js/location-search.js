@@ -1,4 +1,5 @@
-recipient = function () {
+ var recipient = recipient();
+ recipient = function recipient() {
     ls = location.search;
     ls = ls.slice(1);
     ls = ls.split("&");
