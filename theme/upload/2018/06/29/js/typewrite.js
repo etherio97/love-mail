@@ -1,88 +1,101 @@
-var startOnload = function () {
-  document.querySelector('.mail').addEventListener('click', function () {
-    document.querySelector('#mail').setAttribute("class", "mail fadeOutRight");
+/* ------------------------ *\
+|* GLOBAL VARIABLES SETTING *|
+\* ------------------------ */
 
-    document.querySelector('#welcomeMsg').setAttribute("class", "msg show");
+var aux, isTRus;
 
-    setTimeout(function () {
-      document.querySelector('#welcomeMsg').setAttribute("class", "msg loop");
-    }, 2100);
-
-    document.querySelector('#background').volume = 0.8;
-
-    setTimeout(indexStart, 800);
-  })
-}
-
-window.onload = startOnload();
-
-var method = lsOutput(0);
-var recipient;
-
-if (method) {
-  if (method == 1) {
-    var rp = lsOutput(1);
-    var recipient = decodeURIComponent(rp);
-
-  } else if (method == 0) {
-    var rp = lsOutput(1);
-    var recipient = encodeURIComponent(rp);
-
-    location.replace('/?' + 'method=1&text=' + encodeURIComponent(recipient) );
-
-  } else {
-    alert('Parameter Error! Insert Parameter to load this page correctly...');
-
-    location.replace('/?method=1&text=null');
-
-  } 
-}
-
-function indexStart() {
-
-  var audio = document.querySelector("#background");
-
-  audio.play();
-
-  document.body.style.backgroundColor = '#11a66b';
-
-  if (audio.currentTime > 0) {
-    document.getElementById('recipient').innerHTML = decodeURIComponent(recipient);
-
-    if (audio.currentTime > 4) {
-      typeMsg("#welcomeLod-1", 100, 1.6, 1.2, 12);
-      typeMsg("#welcomeLod-2", 2000, 2.2, 1.2, 8);
-      typeMsg("#welcomeLod-3", 4300, 3.5, 1.2, 18);
-    } else {
-      setTimeout("indexStart()", 200);
-    }
-
-  } else {
-    setTimeout("indexStart()", 200);
+function f_stLoaded() {
+  document.getElementById('mail').addEventListener('click', function () {
+    document.getElementById('welcomeMsg').setAttribute("class", "msg up");
+    document.getElementById('mail').setAttribute("class", "mail fadeOutRight");
     document.body.style.backgroundColor = '#832639';
+
+    aux = document.getElementById("bgMusic");
+    aux.type = new Audio();
+    aux.src = '/theme/upload/2018/07/01/audio/audio_1.mp3';
+    aux.volume = 1;
+    aux.load = auxLoaded();
+  })
+
+}
+
+function auxLoaded() {
+  // {{buffered, playing audio}}  
+  var isPlayed = aux.play();
+
+  if (Boolean(isPlayed) == true) {
+    document.getElementById('welcomeMsg').setAttribute("class", "msg up");
+    isTRus = setInterval(msgTiming, 250);
   }
 
-};
+  function msgTiming() {
+    if (aux.currentTime > 0) {
+      document.body.style.backgroundColor = '#35895d';
+      document.getElementById('welcomeMsg').setAttribute("class", "msg up pluse");
 
-function typeMsg(id, delay, time, step, count) {
-  var docx = document.querySelector(id);
-  attr = time + ' steps(' + step + ', end), blink-caret .75s step-end ' + count + ')';
-  setTimeout(function () {
-    docx.setAttribute('class', 'msg typing');
+    }
+    if (aux.currentTime > 4) {
+      typeMsg("#welcomeLod-1", 100, 2, 12);
+      typeMsg("#welcomeLod-2", 2000, 2, 8);
+      typeMsg("#welcomeLod-3", 4300, 4, 16);
+    }
+    if (Boolean(aux.paused) == true) {
+      clearInterval(isTRus);
+    }
+  }
+
+  function typeMsg(id, delay, time, step) {
+    var docx = document.querySelector(id);
+    attr = 'animation-duration: ' + time + 's; animation-timing-function: steps(' + step + ', end);';
     docx.setAttribute('style', attr);
-  }, delay);
 
+    setTimeout(function () {
+      docx.setAttribute('class', 'msg typing');
+    }, delay)
+  }
 }
 
-function lsOutput(x) {
-  var result = search(x);
-  return result[1];
-}
+/* ------------------------- *\
+|* To String Location.Search *|
+\* ------------------------- */
+window.onload = function () {
+  var ls = location.search;
+  var method, recipient;
+  var reXPath = function (v, m) {
+    if (v !== '') {
+      alert(v)
+    }
+    location.assign('/?v=1&txt=' + m);
+  }
 
-function search(x) {
-  var a = decodeURIComponent(location.search);
-  var b = a.slice(1);
-  a = b.split("&");
+  if (ls) {
+    var method = lsOutput(0);
+    var recipient = lsOutput(1);
 
-  return a[x].split("=");
+    if (method == 0) {
+      xRname = encodeURIComponent(recipient);
+      reXPath('', window.btoa(xRname));
+    } else
+    if (method == 1) {
+      xRname = window.atob(recipient);
+      document.getElementById('recipient').innerHTML = decodeURIComponent(xRname);
+
+      isTRus = f_stLoaded();
+    }
+  } else {
+    reXPath('INVALID REQUEST!! \nYou must enter a valid query paramter to load this page.', '0');
+  }
+
+  function lsOutput(x) {
+    var result = search(x);
+
+    function search(x) {
+      var a = decodeURIComponent(location.search);
+      var b = a.slice(1);
+      a = b.split("&");
+
+      return a[x].split("=");
+    }
+    return result[1];
+  }
 }
