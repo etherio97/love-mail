@@ -4,17 +4,15 @@ x = setTimeout(startOnload, 800);
 function startOnload() {
   document.querySelector('.mail').addEventListener('click', function () {
     document.querySelector('#mail').setAttribute("class", "mail fadeOutRight");
-    setInterval(function () {
-      document.querySelector('#welcomeMsg').setAttribute("class", "msg bounceInUp");
-    }, 460);
 
-    setInterval(function () {
-      document.querySelector('#welcomeMsg').setAttribute("class", "msg hide");
-    }, 3900);
+    document.querySelector('#welcomeMsg').setAttribute("class", "msg show");
+    setTimeout(function() {
+      document.querySelector('#welcomeMsg').setAttribute("class", "msg loop");
+    }, 2100);
 
     document.querySelector('#background').volume = 0.8;
 
-    setTimeout(indexStart, 3900);
+    setTimeout(indexStart, 420);
   })
 }
 
@@ -60,7 +58,7 @@ function typeMsg(id, delay, time) {
   var docx = document.querySelector(id);
 
   setTimeout(function () {
-    docx.setAttribute('class', 'msg typing show')
+    docx.setAttribute('class', 'msg typing')
   }, delay);
 
 }

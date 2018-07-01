@@ -1,5 +1,4 @@
 @import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
-
 html,
 body {
   min-width: initial;
@@ -61,40 +60,7 @@ div.tpwte {
 
 /* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
 
-@-webkit-keyframes pulse {
-  from {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
-  }
-  50% {
-    -webkit-transform: scale3d(1.05, 1.05, 1.05);
-    transform: scale3d(1.05, 1.05, 1.05);
-  }
-  to {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
-  }
-}
 
-@keyframes pulse {
-  from {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
-  }
-  50% {
-    -webkit-transform: scale3d(1.05, 1.05, 1.05);
-    transform: scale3d(1.05, 1.05, 1.05);
-  }
-  to {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
-  }
-}
-
-.pulse {
-  -webkit-animation-name: pulse;
-  animation-name: pulse;
-}
 
 @-webkit-keyframes bounceInUp {
   from,
@@ -249,28 +215,32 @@ div.tpwte {
 }
 
 /* Custom Controls */
-.hide {
-  animation: fadeOut 1s;
-  -webkit-animation: fadeOut 1s;
-}
-
-.show {
-  opacity: 1;
-  animation: fadeIn 2s;
-  -webkit-animation: fadeIn 2s;
-}
 
 .mail {
-  -webkit-animation-duration: 2.6s;
-  animation-duration: 1s;
+  -webkit-animation-duration: 1.6s;
+  animation-duration: 1.6s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
 
-.msg {
+.hide {
   opacity: 0;
-  -webkit-animation-duration: 2s;
-  animation-duration: 2s;
+}
+
+.show {
+  opacity: 1;
+  animation: bounceInUp 2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.msg.loop {
+  -webkit-animation-duration: 1.2s;
+  animation-duration: 1.2s;
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
 }
 
 @-webkit-keyframes fadeOut {
@@ -288,5 +258,35 @@ div.tpwte {
   }
   to {
     opacity: 1;
+  }
+}
+
+@-webkit-keyframes pulse {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes pulse {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
   }
 }
