@@ -3,6 +3,7 @@ var audio = document.querySelector("#background")
 // set up text to print, each item in array is new line
 function typewriter() {
   var rept = decodeURIComponent(recipient) + " ထံသုိ႔";
+  console.log(rept);
   var aText = new Array("ခ်စ္ရပါေသာ...", rept) ;
   var iSpeed = 100; // time delay of print out
   var iIndex = 0; // start printing array at this posision
