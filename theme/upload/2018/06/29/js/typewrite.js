@@ -33,7 +33,7 @@ function typewriter() {
 
 function indexStart() {
       document.querySelector("audio#background").play();
-      if (document.querySelector("audio#background").currentTime > 5) {
+      if (document.querySelector("audio#background").currentTime > 5  ) {
         typewriter();
         document.body.setAttribute('style', 'background-color: #11a66b');
       } else {
