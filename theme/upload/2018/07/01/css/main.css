@@ -3,7 +3,6 @@
     border-right: .15em solid rgb(84, 84, 84);
     white-space: nowrap;
     margin: 0 auto;
-    animation: typing 1.8s steps(18, end), blink-caret .75s step-end infinite;
   }
   
   @keyframes typing {
