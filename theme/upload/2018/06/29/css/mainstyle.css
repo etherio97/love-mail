@@ -234,6 +234,11 @@ div.tpwte {
   animation-fill-mode: both;
 }
 
+h2 {
+  padding: 12px;
+  margin: 12px;
+}
+
 .msg.loop {
   -webkit-animation-duration: 1.2s;
   animation-duration: 1.2s;

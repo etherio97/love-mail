@@ -50,9 +50,9 @@ function indexStart() {
     document.getElementById('recipient').innerHTML = decodeURIComponent(recipient);
 
     if (audio.currentTime > 4) {
-      typeMsg("#welcomeLod-1", 100, 1.6, 1.2, 15);
-      typeMsg("#welcomeLod-2", 2000, 2.2, 1.2, 24);
-      typeMsg("#welcomeLod-3", 4300, 3.5, 1.2, 35);
+      typeMsg("#welcomeLod-1", 100, 1.6, 1.2, 12);
+      typeMsg("#welcomeLod-2", 2000, 2.2, 1.2, 8);
+      typeMsg("#welcomeLod-3", 4300, 3.5, 1.2, 18);
     } else {
       setTimeout("indexStart()", 200);
     }

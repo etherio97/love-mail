@@ -1,6 +1,6 @@
 .typing {
     overflow: hidden;
-    border-right: .15em solid rgb(84, 84, 84);
+    border-right: .15em solid transparent;
     white-space: nowrap;
     margin: 0 auto;
     animation: typing 1.8s steps(28, end), blink-caret .75s step-end 10;
@@ -12,6 +12,7 @@
   }
   
   @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: rgb(84, 84, 84); }
+    from { border-color: rgb(84, 84, 84) }
+    50% { border-color: transparent; }
+    to { border-color: rgb(84, 84, 84); }
   }
