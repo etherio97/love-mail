@@ -19,18 +19,21 @@ title: သို႔... စာတစ္ေစာင္
   <!-- /* End: maintp */ -->
 
   <script>
+  var x;
+  x = setTimeout(startOnload, 800);
+
   function startOnload() {
     document.querySelector('.mail').addEventListener('click', function () {
       document.querySelector('#mail').setAttribute("class", "mail fadeOutRight");
       setTimeout(function () {
         document.querySelector('#welcome-msg').innerHTML = '<font color="red" size="50px">♥</font>';
         document.querySelector('#welcome-msg').setAttribute("class", "msg infinite pulse show");
+        document.querySelector('aduio.volume').valume = 0.6;
       }, 460);
 
       setTimeout(indexStart, 1000);
     })
-
-    setTimeout(startOnload, 800);
+  }
 
   </script>
 
@@ -38,5 +41,5 @@ title: သို႔... စာတစ္ေစာင္
 <!-- /* End: content */ -->
 
 
-<audio id="background" src="theme/upload/2018/06/27/audio/audio.mp3" preload></audio>
-<script type="text/javascript" src="theme/js/typewrite.js"></script>
+<audio id="background" src="theme/upload/2018/07/01/audio/au-1.mp3" preload></audio>
+<script type="text/javascript" src="theme/upload/2018/06/29/js/typewrite.js"></script>
