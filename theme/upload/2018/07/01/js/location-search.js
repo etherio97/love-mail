@@ -7,7 +7,7 @@ function lsOutput(x){
 }
 
 function search(x) {
-    var a = location.search;
+    var a = decodeURIComponent(location.search);
     var b = a.slice(1);
         a = b.split("&");
     return a[x].split("=");
