@@ -35,9 +35,9 @@ function auxLoaded() {
 
     }
     if (aux.currentTime > 4) {
-      typeMsg("#welcomeLod-1", 100, 2, 12);
-      typeMsg("#welcomeLod-2", 2000, 2, 8);
-      typeMsg("#welcomeLod-3", 4300, 4, 16);
+      typeMsg("#welcomeLod-1", 100, 2, 18);
+      typeMsg("#welcomeLod-2", 2000, 2, 14);
+      typeMsg("#welcomeLod-3", 4300, 4, 24);
     }
     if (Boolean(aux.paused) == true) {
       clearInterval(isTRus);
