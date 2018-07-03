@@ -13,6 +13,10 @@ body {
   transition: ease all 1.7s;
 }
 
+version {
+  display: none;
+}
+
 div.maintp {
   display: flex;
   position: relative;
