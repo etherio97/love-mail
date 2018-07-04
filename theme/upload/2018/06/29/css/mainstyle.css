@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
 @font-face {
-  font-family: 'Zawgyi-One';
+  font-family: 'ZawgyiOne';
   src: url('/theme/css/fonts/ZawgyiOne_0.woff') format('woff'), /* Pretty Modern Browsers */
        url('/theme/css/fonts/ZawgyiOne_0.ttf')  format('truetype'), /* Safari, Android, iOS */
 }
@@ -12,7 +12,7 @@ body {
 }
 
 body {
-  font-family: "Anonymous Pro", Courier, monospace;
+  font-family: "ZawgyiOne", calibri, serif;
   background-color: #626262;
   color: #f2f2f2;
   font-style: normal;
