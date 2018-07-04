@@ -1,4 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+@font-face {
+  font-family: 'Zawgyi-One';
+  src: url('/theme/css/fonts/ZawgyiOne.woff') format('woff'), /* Pretty Modern Browsers */
+       url('/theme/css/fonts/ZawgyiOne.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
 html,
 body {
   min-width: initial;
