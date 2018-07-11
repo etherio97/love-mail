@@ -1,0 +1,106 @@
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+@font-face {
+  font-family: 'ZawgyiOne';
+  src: url('/theme/css/fonts/ZawgyiOne_0.woff') format('woff'), /* Pretty Modern Browsers */
+       url('/theme/css/fonts/ZawgyiOne_0.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
+html,
+body {
+  min-width: initial;
+  min-height: initial;
+}
+
+body {
+  font-family: "ZawgyiOne", calibri, serif;
+  background-color: #626262;
+  color: #f2f2f2;
+  font-style: normal;
+  transition: ease all 1.7s;
+}
+
+version {
+  display: none;
+}
+
+div.maintp {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  min-width: initial;
+  width: initial;
+}
+
+div.tpwte {
+  padding: 4em;
+  overflow: hidden;
+  font-family: 'Anonymous Pro', monospace;
+  color: rgba(255, 255, 255, .75);
+}
+
+.bounceInUp {
+  -webkit-animation-name: bounceInUp;
+  animation-name: bounceInUp;
+}
+
+.fadeInLeft {
+  -webkit-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
+}
+
+.fadeOutRight {
+  -webkit-animation-name: fadeOutRight;
+  animation-name: fadeOutRight;
+}
+
+.hide {
+  opacity: 0;
+  transition: ease all 0.89s;
+  -webkit-transition: ease all 0.89s;
+}
+
+.show {
+  opacity: 1;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  transition: ease all 0.89s;
+  -webkit-transition: ease all 0.89s;
+}
+
+/* Custom Controls */
+
+.mail {
+  cursor: pointer;
+  -webkit-animation-duration: 1.6s;
+  animation-duration: 1.6s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+
+h2 {
+  transition: ease all 0.89s;
+  -webkit-transition: ease all 0.89s;
+  padding: 12px;
+  margin: 12px;
+}
+
+.msg.typing {
+  overflow: hidden;
+  border-right: .15em solid transparent;
+  white-space: nowrap;
+  margin: 0 auto;
+  animation: typing 1s steps(12, end);
+  -webkit-animation: typing 1s steps(12, end);
+}
+
+.msg.up {
+  animation: bounceInUp 1.5s; 
+  -webkit-animation: bounceInUp 1.5s; 
+}
+
+.msg.up.pluse {
+  animation: bounceInUp 1.5s, pulse 1.2s 2.27s infinite; 
+  -webkit-animation: bounceInUp 1.5s, pulse 1.2s 2.27s infinite; 
+}
