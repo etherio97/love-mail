@@ -35,8 +35,6 @@ function auxLoaded(aux) {
   }
 }
 
-var _location = { search: '?name=ပူရှိန်း' }
-
 let initiated = false;
 
 /* ------------------------- *\
@@ -46,7 +44,7 @@ window.addEventListener('load', () => {
   let name;
   const mail = document.querySelector('#mail');
   const person = document.querySelector('#recipient');
-  const params = new URLSearchParams(_location.search);
+  const params = new URLSearchParams(location.search);
   const welcome = document.querySelector('#welcomeMsg');
  
   if (params.has('name')) {
