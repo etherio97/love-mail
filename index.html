@@ -3,15 +3,14 @@ layout: blank-page
 title: သို႔... စာတစ္ေစာင္
 ---
 
-
 <center>
-  <div class="maintp" style="width:fit-content;">
-    <div class="tpwte" style="width:fit-content;">
-      <img class="mail fadeInLeft" id="mail" width="80px" height="auto" src="./lib/assets/img/mail.svg" alt="mail-icon">
+  <div class="container">
+    <div class="wrapper">
+      <img class="mail hide" id="mail" width="80px" height="auto" src="./assets/img/mail.svg" alt="mail-icon">
       <h2 class="msg hide" id="welcomeMsg" style="color:red; font-size: 48px;"> ♥ </h2>
       <h2 class="msg hide" id="welcomeLod-1" style="width:fit-content;"> ခ်စ္ရပါေသာ... </h2>
       <h2 class="msg hide" id="welcomeLod-2" style="width:fit-content;">
-        <b id="recipient" style="color: rgb(0, 193, 207); font-weight: 500;"> [[|recipient.name|]] </b> ထံသုိ႔
+        <b id="recipient" style="color: rgb(0, 193, 207); font-weight: 500;"> {{name}} </b> ထံသုိ႔
         <br />
       </h2>
       <br/>
@@ -27,9 +26,8 @@ title: သို႔... စာတစ္ေစာင္
   <!-- /* End: content */ -->
 </center>
 
-<audio id="bgMusic" type="audio/mp3" src="/lib/assets/audio/audio_1.mp3" poster="" preload="metadata">
+<audio id="bgMusic" type="audio/mp3" src="./assets/audio/audio_1.mp3" poster="" preload="metadata">
   <p>This browser does not support the audio element.</p>
 </audio>
 
-<script type="text/javascript" src="./lib/js/initiated.js"></script>
-<script type="text/javascript" src="./lib/js/location-search.js"></script>
+<script type="text/javascript" src="./js/main.js"></script>
