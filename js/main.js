@@ -49,18 +49,18 @@ window.addEventListener('load', () => {
  
   if (params.has('name')) {
     name = params.get('name');
-    name = encodeURI(name);
-    name = btoa(name);
+    //name = encodeURI(name);
+    //name = btoa(name);
     
-    sessionStorage.setItem(PERSON_NAME, name);
+    //sessionStorage.setItem(PERSON_NAME, name);
   }
 
-  name = sessionStorage.getItem(PERSON_NAME);
+  //name = sessionStorage.getItem(PERSON_NAME);
   
   if (!name) {
     alert('no name');
   }
-  
+  /*
   try {
     name = atob(name);
     name = decodeURI(name);
@@ -68,7 +68,7 @@ window.addEventListener('load', () => {
     // sessionStorage.removeItem(PERSON_NAME);
     return alert('Decoding failed', err)
   }
-
+  */
   person.innerHTML = name;
 
   let aux = new Audio;
