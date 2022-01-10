@@ -57,14 +57,16 @@ window.addEventListener('load', () => {
 
   name = sessionStorage.getItem(PERSON_NAME);
   
-  if (!name) return console.log('no name');
+  if (!name) {
+    alert('no name');
+  }
   
   try {
     name = atob(name);
     name = decodeURI(name);
   } catch (err) {
-    sessionStorage.removeItem(PERSON_NAME);
-    return console.error('Decoding failed', err)
+    // sessionStorage.removeItem(PERSON_NAME);
+    return alert('Decoding failed', err)
   }
 
   person.innerHTML = name;
